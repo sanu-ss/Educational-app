@@ -1,0 +1,15 @@
+<div *ngIf="isLoggedIn()">
+  <mat-toolbar >
+    <span>Your App Name</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      (click)="logout()"
+      matTooltip="Logout"
+      matTooltipPosition="below"
+      matTooltipTrigger="hover"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>

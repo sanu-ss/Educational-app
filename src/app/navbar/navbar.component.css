@@ -1,0 +1,19 @@
+/* Add space between app name and user icon */
+/* .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Right-align the user icon */
+  /*.mat-icon-button {
+    margin-left: auto;
+  } */
+  .mat-toolbar {
+    background: rgb(161, 226, 248);
+    color: #071418;
+}
+
+  .spacer {
+    flex: 1 1 auto;
+  }
