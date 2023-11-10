@@ -1,1 +1,60 @@
-<p>home works!</p>
+<!-- <button mat-raised-button (click)="isOptional = !isOptional">
+    {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
+  </button> -->
+  
+  <mat-stepper [linear]="isLinear" [orientation]="isVertical ? 'horizontal' : 'vertical'" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Personal Info</ng-template>
+  
+        <div class="form-container">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Full name" formControlName="name" required>
+          </mat-form-field>
+  
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email Address" formControlName="email" required>
+          </mat-form-field>
+        </div>
+  
+        <div class="button-container">
+          <button mat-button matStepperNext [disabled]="firstFormGroup.invalid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" >
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <div class="form-container">
+            <mat-form-field>
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="Address" formControlName="address" required>
+            </mat-form-field>
+    
+            <mat-form-field>
+              <mat-label>Pincode</mat-label>
+              <input matInput placeholder="Pincode" formControlName="pin" required>
+            </mat-form-field>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext [disabled]="secondFormGroup.invalid">Next</button>
+        </div>
+      </form>
+    </mat-step>
+  
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>Completed</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button (click)="onSubmit()">Submit</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  
+  

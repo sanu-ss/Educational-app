@@ -1,0 +1,43 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+
+  ::ng-deep .mat-horizontal-stepper-header,
+  ::ng-deep .mat-vertical-stepper-header {
+    font-size: 16px; 
+  }
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px; /* Adjust as needed */
+  }
+  
+  @media screen and (max-width: 600px) {
+    /* Responsive styles for screens less than or equal to 600px wide */
+    .form-container {
+      flex-direction: column;
+    }
+
+    ::ng-deep .mat-horizontal-stepper-header,
+  ::ng-deep .mat-vertical-stepper-header {
+    font-size: 14px; /* Adjust as needed for smaller screens */
+  }
+
+  ::ng-deep .mat-horizontal-stepper-header {
+    padding: 8px; /* Adjust padding for better spacing on small screens */
+  }
+
+  }
+
+  

@@ -1,3 +1,7 @@
+Angular CLI: 14.2.11
+Node: 16.20.2
+Package Manager: npm 8.19.4
+
 # EducationalApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.6.
