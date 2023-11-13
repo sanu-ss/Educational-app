@@ -1,10 +1,53 @@
+/* .mat-toolbar {
+   background: rgba(60, 63, 65, 0.568);
+  color: #071418;
+  height: 80px;
+} */
+.logo-container{
+  display: block;
+  height: 85px;
+  background-color: whitesmoke;
+}
+
+.logo{
+  height: 65px;
+  width: auto;
+  padding: 10px 15px;
+}
+
+/* .page-container {
+  flex: 1;
+} */
+.image-login-container{
+  display: flex;
+  flex: 1;
+}
+.cover-image{
+  flex: 1;
+  height: 500px;
+  width: 800px;
+}
+
 .login-container {
-    max-width: 400px;
+    max-width: 350px;
+    max-height: 500px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 5px;
   }
-  
+  .instruction-image{
+    flex: 1;
+    height: 250px;
+    width: 700px;
+  }
+
+  .instruction-container{
+    font-size: medium;
+  }
+  .instruction-container li{
+    padding: 5px;
+  }
+
   h2 {
     text-align: center;
     color: #333;
@@ -20,13 +63,37 @@
     width: 100%;
   }
   
-  button {
-    background-color: #007bff;
-    color: #fff;
+  .login-btn {
+    background-color: #1572d6 !important;
+    color: #ffffff !important;
     font-size: 16px;
+    font-weight: bold;
   }
   
-  button:hover {
-    background-color: #0056b3;
+  .login-btn:hover {
+    background-color: #2ca12c !important;
   }
   
+  .bottom-container{
+    padding: 40px 0px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    /* Responsive styles for screens less than or equal to 600px wide */
+    .page-container {
+      flex-direction: column;
+    }
+    .image-login-container{
+      flex-direction: column;
+      
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    /* Responsive styles for screens less than or equal to 600px wide */
+    .image-login-container{
+      flex-direction: column;
+      
+    }
+  }
