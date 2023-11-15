@@ -1,7 +1,23 @@
 <!-- <button mat-raised-button (click)="isOptional = !isOptional">
     {{!isOptional ? 'Enable optional steps' : 'Disable optional steps'}}
   </button> -->
-  
+  <div class="header-bar">
+    <div class="logo-container">
+      <img src="../../assets/logo.png" alt="Logo" class="logo" />
+      <div class="text-container">
+        <!-- <p>Text 1</p>
+        <p>Text 2</p> -->
+      </div>
+      <span class="spacer"></span>
+    </div>
+    <div class="right-container">
+      <div class="right-text">
+        <!-- <p>Right Text 1</p>
+        <p>Right Text 2</p> -->
+      </div>
+      <!-- <button class="action-button" mat-raised-button color="primary">Refesh</button> -->
+    </div>
+  </div>
   <mat-stepper [linear]="isLinear" [orientation]="isVertical ? 'horizontal' : 'vertical'" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
@@ -20,7 +36,7 @@
         </div>
   
         <div class="button-container">
-          <button mat-button matStepperNext [disabled]="firstFormGroup.invalid">Next</button>
+          <button mat-raised-button color="primary" matStepperNext [disabled]="firstFormGroup.invalid">Next</button>
         </div>
       </form>
     </mat-step>
@@ -40,8 +56,8 @@
             </mat-form-field>
         </div>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext [disabled]="secondFormGroup.invalid">Next</button>
+          <button mat-raised-button color="primary" matStepperPrevious style="margin-right: 10px;">Back</button>
+          <button mat-raised-button color="primary" matStepperNext [disabled]="secondFormGroup.invalid">Next</button>
         </div>
       </form>
     </mat-step>
@@ -50,9 +66,9 @@
       <ng-template matStepLabel>Done</ng-template>
       <p>Completed</p>
       <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-        <button mat-button (click)="onSubmit()">Submit</button>
+        <button mat-raised-button color="primary" matStepperPrevious style="margin-right: 10px;">Back</button>
+        <button mat-raised-button color="warn" (click)="stepper.reset()" style="margin-right: 10px;">Reset</button>
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
       </div>
     </mat-step>
   </mat-stepper>

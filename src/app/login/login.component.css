@@ -76,32 +76,76 @@
   align-content: center;
   justify-content: space-between;
 }
-
+.instruction-login-container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 20px;
+}
 @media screen and (max-width: 600px) {
   /* Responsive styles for screens less than or equal to 600px wide */
-  .page-container {
+  .image-login-container, .instruction-login-container, .page-container {
     flex-direction: column;
   }
-  .image-login-container {
-    flex-direction: column;
-  }
-  .steps-container,
-  .login-container {
-    flex: 1 1 25%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 25% */
-  }
-}
 
-@media screen and (max-width: 700px) {
   .login-container,
   .instruction-container {
     width: 100%;
     max-width: none;
   }
-  .steps-container,
+  .steps-container {
+    padding-top: 20px;
+    flex: 1; 
+    max-width: 100%;
+  min-width: 100%;
+  font-size: 14px;
+  }
+  .instruction-image-container,
+  .steps-container {
+    padding: 0;
+  }
   .login-container {
-    flex: 1 1 25%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 25% */
+    flex: 1 ; /* flex-grow: 1, flex-shrink: 1, flex-basis: 25% */
+  }
+  ul {
+    margin-left: -20px;
   }
 }
+
+@media screen and (max-width: 750px) {
+
+  .image-login-container, .instruction-login-container, .page-container {
+    flex-direction: column;
+  }
+
+  .login-container,
+  .instruction-container {
+    width: 100%;
+    max-width: none;
+  }
+  .steps-container {
+    padding-top: 20px;
+    flex: 1; 
+    max-width: 100%;
+    min-width: 100%;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  ul {
+    margin-left: -20px;
+  }
+  .instruction-image-container,
+  .steps-container {
+    padding: 0;
+  }
+  .login-container {
+    flex: 1 ; /* flex-grow: 1, flex-shrink: 1, flex-basis: 25% */
+  }
+}
+
+
+
+
 
 .steps-container li {
   padding: 5px;

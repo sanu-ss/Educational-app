@@ -10,10 +10,26 @@
     margin-left: auto;
   } */
   .mat-toolbar {
-    background: rgb(161, 226, 248);
-    color: #071418;
+    background: rgb(80 83 84 / 92%);
+    color: #ffffff;
+    height: 50px;
+}
+.page-name{
+  width: 180px;
+  height: 50px;
+  background-color: #0a0a0a;
+  text-align: center;
+  justify-content: space-around;
+  display: flex;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-size: 15px;
 }
 
+.custom-notification{
+  padding-right: 20px;
+}
   .spacer {
     flex: 1 1 auto;
   }
